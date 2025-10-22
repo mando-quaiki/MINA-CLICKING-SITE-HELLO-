@@ -61,39 +61,39 @@ case 1000:
     createNote("well well well 1000? well if you want fuck just say it", 11);
     break;
 case 1010:
-    createNote("you so cute", 9);
+    createNote("you so cute", 12);
     break;
 
 case 1100:
-    createNote("wow you made 1000 now 1100? i am proud of you", 10);
+    createNote("wow you made 1000 now 1100? i am proud of you", 13);
     break;
 
 case 1111:
-    createNote("you know you really crazy but i love it", 11);
+    createNote("you know you really crazy but i love it", 14);
     break;
 
 case 1500:
-    createNote("you keep going? good girl i love you", 5);
+    createNote("you keep going? good girl i love you", 15);
     break;
 
 case 2000:
-    createNote("My kid my daughter i am your dad! congratulasion at 2000!", 6);
+    createNote("My kid my daughter i am your dad! congratulasion at 2000!", 16);
     break;
 
 case 2500:
-    createNote("oh wow you keep going", 7);
+    createNote("oh wow you keep going", 17);
     break;
 
 case 3000:
-    createNote("3000? wow well um cool? !", 8);
+    createNote("3000? wow well um cool? !", 18);
     break;
 
 case 5000:
-    createNote("5000!? wow i am proud of you", 9);
+    createNote("5000!? wow i am proud of you", 19);
     break;
 
 case 10000:
-    createNote("10000 the end, i love you Nino i will marry you both, i too love nina so sr but i love you too i am happy with both i hope we all will be happy together i just want live with you all and fk you all heh. btw nina want fuck you and i am not joking", 10);
+    createNote("10000 the end, i love you Nino i will marry you both, i too love nina so sr but i love you too i am happy with both i hope we all will be happy together i just want live with you all and fk you all heh. btw nina want fuck you and i am not joking", 20);
     break;
 
        }
