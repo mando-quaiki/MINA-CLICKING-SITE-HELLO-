@@ -60,6 +60,41 @@ case 500:
 case 1000:
     createNote("well well well 1000? well if you want fuck just say it", 11);
     break;
+case 1010:
+    createNote("1010 kliknięć! 😵 Nic tu nie ma!", 9);
+    break;
+
+case 1100:
+    createNote("wow you made 1000 now 1100? i am proud of you", 10);
+    break;
+
+case 1111:
+    createNote("you know you really crazy but i love it", 11);
+    break;
+
+case 1500:
+    createNote("you keep going? good girl i love you", 5);
+    break;
+
+case 2000:
+    createNote("My kid my daughter i am your dad! congratulasion at 2000!", 6);
+    break;
+
+case 2500:
+    createNote("oh wow you keep going", 7);
+    break;
+
+case 3000:
+    createNote("3000? wow well um cool? !", 8);
+    break;
+
+case 5000:
+    createNote("5000!? wow i am proud of you", 9);
+    break;
+
+case 10000:
+    createNote("10000 the end, i love you Nino i will marry you or if i can so marry both i just want live with you all and fk you all heh. btw nina want fuck you and i am not joking", 10);
+    break;
 
        }
 });
