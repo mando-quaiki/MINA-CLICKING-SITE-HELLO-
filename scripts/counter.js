@@ -61,7 +61,7 @@ case 1000:
     createNote("well well well 1000? well if you want fuck just say it", 11);
     break;
 case 1010:
-    createNote("1010 kliknięć! 😵 Nic tu nie ma!", 9);
+    createNote("you so cute", 9);
     break;
 
 case 1100:
@@ -93,7 +93,7 @@ case 5000:
     break;
 
 case 10000:
-    createNote("10000 the end, i love you Nino i will marry you or if i can so marry both i just want live with you all and fk you all heh. btw nina want fuck you and i am not joking", 10);
+    createNote("10000 the end, i love you Nino i will marry you both, i too love nina so sr but i love you too i am happy with both i hope we all will be happy together i just want live with you all and fk you all heh. btw nina want fuck you and i am not joking", 10);
     break;
 
        }
