@@ -18,66 +18,30 @@ body { min-height:100vh; display:flex; justify-content:center; align-items:cente
 .image-slot.filled::before { display:none; }
 .notes-container { position:fixed; left:20px; top:50%; transform:translateY(-50%); z-index:1000; display:flex; flex-direction:column; gap:10px; }
 .note { background-color:#fff; padding:15px; border-radius:5px; box-shadow:0 2px 5px rgba(0,0,0,0.2); opacity:0; position:fixed; width:200px; transition:all 0.5s ease-in-out; }
-.note-position-1 { top:20px; right:20px; transform:translateX(100%); }
-.note-position-2 { bottom:20px; left:20px; transform:translateY(100%); }
-.note-position-3 { top:50%; right:20px; transform:translate(100%,-50%); }
-.note-position-4 { position:fixed; left:50%; top:30%; transform:translate(-50%,-100%) scale(0.8); z-index:1000; }
-.note-position-4.visible { transform:translate(-50%,0) scale(1); }
-.note.visible { opacity:1; transform:translate(0,0); }
-.note-position-5 {
-    top: 40%;
-    left: 20%;
-    transform: translate(-50%, -50%) scale(0.8);
-}
+.notes-container { position: fixed; left: 20px; top: 50%; transform: translateY(-50%); z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
+.note { background-color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); opacity: 0; position: fixed; width: 220px; transition: all 0.5s ease-in-out; z-index: 100; }
 
-.note-position-6 {
-    top: 50%;
-    right: 20%;
-    transform: translate(50%, -50%) scale(0.8);
-}
+/* Stałe pozycje dla pierwszych 20 notek */
+.note-position-1  { top: 5%;   left: 5%;   transform: translate(-50%, -50%) scale(0.8); z-index:101; }
+.note-position-2  { top: 5%;   right: 5%;  transform: translate(50%, -50%) scale(0.8); z-index:102; }
+.note-position-3  { top: 15%;  left: 20%;  transform: translate(-50%, -50%) scale(0.8); z-index:103; }
+.note-position-4  { top: 15%;  right: 20%; transform: translate(50%, -50%) scale(0.8); z-index:104; }
+.note-position-5  { top: 25%;  left: 10%;  transform: translate(-50%, -50%) scale(0.8); z-index:105; }
+.note-position-6  { top: 25%;  right: 10%; transform: translate(50%, -50%) scale(0.8); z-index:106; }
+.note-position-7  { top: 35%;  left: 15%;  transform: translate(-50%, -50%) scale(0.8); z-index:107; }
+.note-position-8  { top: 35%;  right: 15%; transform: translate(50%, -50%) scale(0.8); z-index:108; }
+.note-position-9  { top: 45%;  left: 20%;  transform: translate(-50%, -50%) scale(0.8); z-index:109; }
+.note-position-10 { top: 45%;  right: 20%; transform: translate(50%, -50%) scale(0.8); z-index:110; }
+.note-position-11 { top: 55%;  left: 25%;  transform: translate(-50%, -50%) scale(0.8); z-index:111; }
+.note-position-12 { top: 55%;  right: 25%; transform: translate(50%, -50%) scale(0.8); z-index:112; }
+.note-position-13 { top: 65%;  left: 30%;  transform: translate(-50%, -50%) scale(0.8); z-index:113; }
+.note-position-14 { top: 65%;  right: 30%; transform: translate(50%, -50%) scale(0.8); z-index:114; }
+.note-position-15 { top: 75%;  left: 35%;  transform: translate(-50%, -50%) scale(0.8); z-index:115; }
+.note-position-16 { top: 75%;  right: 35%; transform: translate(50%, -50%) scale(0.8); z-index:116; }
+.note-position-17 { top: 85%;  left: 40%;  transform: translate(-50%, -50%) scale(0.8); z-index:117; }
+.note-position-18 { top: 85%;  right: 40%; transform: translate(50%, -50%) scale(0.8); z-index:118; }
+.note-position-19 { bottom: 5%; left: 45%;  transform: translate(-50%, 50%) scale(0.8); z-index:119; }
+.note-position-20 { bottom: 5%; right: 45%; transform: translate(50%, 50%) scale(0.8); z-index:120; }
 
-.note-position-7 {
-    bottom: 20%;
-    left: 30%;
-    transform: translate(-50%, 50%) scale(0.8);
-}
-
-.note-position-8 {
-    bottom: 25%;
-    right: 25%;
-    transform: translate(50%, 50%) scale(0.8);
-}
-
-/* animacja widoczności dla wszystkich nowych */
-.note-position-5.visible,
-.note-position-6.visible,
-.note-position-7.visible,
-.note-position-8.visible {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-}
-.note-position-9 {
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-}
-
-.note-position-10 {
-    top: 80%;
-    right: 50%;
-    transform: translate(50%, 50%) scale(0.8);
-}
-
-.note-position-11 {
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-}
-
-/* animacja dla nowych pozycji */
-.note-position-9.visible,
-.note-position-10.visible,
-.note-position-11.visible {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-}
+/* Animacja dla wszystkich notek */
+.note.visible { opacity: 1; transform: translate(0, 0) scale(1); }
