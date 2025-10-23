@@ -7,6 +7,7 @@ if (!mainButton || !notesContainer || !imageSliderContainer) {
     console.error('Required elements not found!');
 }
 
+// Tworzymy notkę i dodajemy do DOM
 function createNote(text, position) {
     const note = document.createElement('div');
     note.className = `note note-position-${position}`;
@@ -16,6 +17,21 @@ function createNote(text, position) {
     setTimeout(() => {
         note.classList.add('visible');
     }, 100);
+}
+
+// Funkcja losująca pozycje dla notek 1-19 i 21
+function randomizeNotesPositions() {
+    const noteNumbers = [...Array(19).keys()].map(i => i + 1).concat([21]);
+    noteNumbers.forEach(num => {
+        const note = document.querySelector(`.note.note-position-${num}`);
+        if (note) {
+            const top = Math.floor(Math.random() * 85) + 5; // 5% - 90%
+            const left = Math.floor(Math.random() * 85) + 5;
+            note.style.top = top + "%";
+            note.style.left = left + "%";
+            note.style.transform = "translate(-50%, -50%) scale(0.8)";
+        }
+    });
 }
 
 mainButton.addEventListener('click', () => {
@@ -36,7 +52,7 @@ mainButton.addEventListener('click', () => {
             createNote("from some time i was wondering to tell you that, but always i knew its bad bc i would be bad but i guess she will like it if we together would be just like that", 3);
             break;
         case 100:
-            createNote("congratulasion,you reached 100 clicks Nino! i hope it wasnt hard or too boring ehh, i think i love you, yes you made me love you really idk how or why i am weak but i still love nina but i love you too AAAAAAAAAAA Fk just i love you ok? shut up really! and i love you really love you idk i want say that loud i loved you before but i felt bad for nina feelings but i guess she will like it and be ok with it if you will be too ok , you will be my second wife or my only if something bad happend. ANYWAY I LOVE YOU NINO MWAH! AND NO ITS NOT BC OF YESTERDAY I WAS WONDERING IF THAT FEELINGS ARE REAL FROM A 3 WEEKS OR EVEN BEOFER WHO KNOW JUST BE HAPPY OK? AND SHUT UP!! REALLY AND i love you mwah", 4);
+            createNote("congratulasion,you reached 100 clicks Nino! ...", 4);
             mainButton.style.transform = 'scale(1.1)';
             break;
         case 101:
@@ -49,8 +65,7 @@ mainButton.addEventListener('click', () => {
             createNote("you keep clicking? really? bruh", 7);
             break;
         case 130:
-            // ZAMIANA: nie mogę powielać treści nawołujących do przemocy — zamieniam na bezpieczny tekst
-            createNote("OK,FINE IF YOU WANT ACION BET,NINO I AM GONNA FUCK YOU AND RAPE YOU AND USE YOU LIKE MY OWN FUCKTOY!", 8);
+            createNote("i am gonna fuck your pussy so hard that it will hurt you , you will beg for stop and i will keep fk and fk and i will choke you my sweet pet :> mwah!", 8);
             break;
         case 200:
             createNote("wow 200?, there is nothing there still i lied about before i will add more text mwah", 9);
@@ -59,7 +74,7 @@ mainButton.addEventListener('click', () => {
             createNote("500 !? THE FUCK, YOU DONT HAVE ANY THING TO DO? MAYBE TALK WITH ME!! OR SOMETHING STOP CLICK!!!!", 10);
             break;
         case 1000:
-            createNote("well well well 1000? well if you want fuck just say it", 11);
+            createNote("well well well 1000? well if you want ...", 11);
             break;
         case 1010:
             createNote("you so cute", 12);
@@ -82,28 +97,21 @@ mainButton.addEventListener('click', () => {
         case 3000:
             createNote("3000? is it worth it? idk what to text tbh", 18);
             break;
-
         case 5000:
             createNote("5000!? wow i am proud of you,website will got broke in while :p", 19);
-            // znajdź notkę i zastosuj efekt jeśli już w DOM
             setTimeout(() => {
                 const note5000 = document.querySelector('.note.note-position-19');
-                if (note5000) {
+                if(note5000) {
                     note5000.style.backgroundColor = 'red';
                     note5000.style.color = 'white';
                     note5000.style.animation = 'shake 0.5s ease-in-out 5';
                 }
             }, 150);
             break;
-
         case 10000:
-            createNote("10000 the end, i love you Nino i will marry you both, i too love nina so sr but i love you too i am happy with both i hope we all will be happy together i just want live with you all and fk you all heh. btw nina want fuck you and i am not joking", 20);
-
-            // Efekt na całe tło - miganie i wstrząsy
+            createNote("10000 the end, i love you Nino ...", 20); // efekt specjalny na środku
             document.body.style.transition = 'background-color 0.2s ease';
-            // animuj body shake kilkukrotnie
             document.body.style.animation = 'shake 0.5s ease-in-out 6';
-            // ustaw czerwone tło na chwilę
             const prevBg = getComputedStyle(document.body).backgroundColor;
             document.body.style.backgroundColor = 'red';
             setTimeout(() => {
@@ -111,75 +119,31 @@ mainButton.addEventListener('click', () => {
                 document.body.style.backgroundColor = prevBg || '#f0f0f0';
             }, 3000);
             break;
-
         case 10010:
-            createNote("YOU ARE COOKED I ADDED 100 000 LAST LVL, use autoclicker", 21);
+            createNote("YOU ARE COOKED I ADDED 100 000 LAST LVL, use autoclicker", 21); // normalna, też randomizowana
             break;
-
         case 100000:
-    createNote("are you fucking sick? 100 000 really? wow nino nah its really wow i am really proud of you", 22);
+            createNote("are you fucking sick? 100 000 really? wow nino nah its really wow i am really proud of you", 22); // efekt wielki, center
+            document.body.classList.add('global-shake');
+            const imageUrl = 'assets/images1/cracked.png';
+            const overlay = document.createElement('div');
+            overlay.id = 'crack-overlay';
+            overlay.style.backgroundImage = `url('${imageUrl}')`;
+            document.body.appendChild(overlay);
+            overlay.classList.add('crack-show');
+            const DURATION = 5000;
+            setTimeout(() => {
+                overlay.classList.remove('crack-show');
+                overlay.style.transition = 'opacity 400ms ease';
+                overlay.style.opacity = '0';
+            }, DURATION - 600);
+            setTimeout(() => {
+                if(overlay.parentElement) overlay.parentElement.removeChild(overlay);
+                document.body.classList.remove('global-shake');
+            }, DURATION + 100);
+            break;
+    }
 
-    // --- efekt zatrzęsienia --- //
-    // dodajemy klasę shake do body (używa @keyframes shake w CSS)
-    document.body.classList.add('global-shake');
-
-    // --- nakładka z pękniętym szkłem --- //
-    // Jeśli masz obrazek: assets/images1/cracked.png -> użyj imageUrl
-    const imageUrl = 'assets/images1/cracked.png';
-
-    // Tworzymy overlay
-    const overlay = document.createElement('div');
-    overlay.id = 'crack-overlay';
-    overlay.setAttribute('aria-hidden', 'true');
-
-    // ustawiamy tło (jeśli nie ma pliku, poniżej znajdziesz opcję SVG fallback)
-    overlay.style.backgroundImage = `url('${imageUrl}')`;
-    overlay.style.backgroundRepeat = 'no-repeat';
-    overlay.style.backgroundPosition = 'center';
-    overlay.style.backgroundSize = 'contain';
-
-    document.body.appendChild(overlay);
-
-    // animujemy: fade-in + scale + efekty
-    overlay.classList.add('crack-show');
-
-    // czas trwania efektu (ms)
-    const DURATION = 5000;
-
-    // Po DURATION usuwamy overlay i zatrzymujemy shake
-    setTimeout(() => {
-        overlay.classList.remove('crack-show');
-        // delikatne znikanie
-        overlay.style.transition = 'opacity 400ms ease';
-        overlay.style.opacity = '0';
-    }, DURATION - 600); // zaczynamy fade-out nieco wcześniej
-
-    // usuń zupełnie po chwili
-    setTimeout(() => {
-        if (overlay.parentElement) overlay.parentElement.removeChild(overlay);
-        document.body.classList.remove('global-shake');
-    }, DURATION + 100);
-
-    break;
-function randomizeNotesPositions() {
-    // tablica notek do losowania: 1-19 i 21
-    const noteNumbers = [...Array(19).keys()].map(i => i+1).concat([21]);
-
-    noteNumbers.forEach(num => {
-        const note = document.querySelector(`.note.note-position-${num}`);
-        if(note) {
-            // losujemy top i left w procentach, np. 5% - 90%
-            const top = Math.floor(Math.random() * 85) + 5; 
-            const left = Math.floor(Math.random() * 85) + 5;
-            note.style.top = top + "%";
-            note.style.left = left + "%";
-            note.style.transform = "translate(-50%, -50%) scale(0.8)";
-        }
-    });
-}
-
-// Wywołujemy przy załadowaniu strony
-window.addEventListener("DOMContentLoaded", randomizeNotesPositions);
-
-       }
+    // Po każdym kliknięciu randomizujemy istniejące notki (1-19 i 21)
+    setTimeout(randomizeNotesPositions, 100);
 });
