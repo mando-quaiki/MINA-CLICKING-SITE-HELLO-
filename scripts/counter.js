@@ -49,7 +49,7 @@ mainButton.addEventListener('click', () => {
             createNote("you keep clicking? really? bruh", 7);
             break;
         case 130:
-            createNote("i am gonna fuck your pussy so hard that it will hurt you , you will beg for stop and i will keep fk and fk and i will choke you my sweet pet :> mwah!", 8);
+            createNote("ii am gonna hug you and kiss you and care for you", 8);
             break;
         case 200:
             createNote("wow 200?, there is nothing there still i lied about before i will add more text mwah", 9);
@@ -58,7 +58,7 @@ mainButton.addEventListener('click', () => {
             createNote("500 !? THE FUCK, YOU DONT HAVE ANY THING TO DO? MAYBE TALK WITH ME!! OR SOMETHING STOP CLICK!!!!", 10);
             break;
         case 1000:
-            createNote("well well well 1000? well if you want fuck just say it", 11);
+            createNote("well well well 1000? well if you want hug just say it", 11);
             break;
         case 1010:
             createNote("you so cute!", 12);
@@ -103,7 +103,7 @@ mainButton.addEventListener('click', () => {
             createNote("HM you know i will work very hard to come to japan", 26);
             break;
         case 60000:
-            createNote("nina want me to pee in her, so you want too? as a weak girl? i am sure you will love that", 27);
+            createNote("nina want me to pee in her, so you want too? as a weak girl? i am sure you will love that (idk if no so ok i will hug you instead)", 27);
             break;
         case 70000:
             createNote("i wont die, not now, i can die bc of that fk illness but i wont for you for nina, i want live with you both and have happy life dont you dare die too!", 28);
