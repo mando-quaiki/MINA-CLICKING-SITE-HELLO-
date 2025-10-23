@@ -52,7 +52,7 @@ mainButton.addEventListener('click', () => {
             createNote("from some time i was wondering to tell you that, but always i knew its bad bc i would be bad but i guess she will like it if we together would be just like that", 3);
             break;
         case 100:
-            createNote("congratulasion,you reached 100 clicks Nino! ...", 4);
+            createNote("I WANTED TO TELL YOU I LOVE YOU AND I LOVE NINA STILL BUT I LOVE YOU NINO I LOVE YOU BOTH I WILL MARRY YOU BOTH AND FK TOO", 4);
             mainButton.style.transform = 'scale(1.1)';
             break;
         case 101:
