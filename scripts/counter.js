@@ -128,7 +128,30 @@ mainButton.addEventListener('click', () => {
             }, DURATION + 100);
             break;
     }
+ case 20000:
+            createNote("I ADDED NEW NOTES FROM MEEEE NINOOOOOO, heh i love you my shy cutie", 23);
+            break;
+        case 30000:
+            createNote("oh well you keep going huh? i will tell you fun fact in 40000 ", 24);
+            break;
+        case 40000:
+            createNote("so fun fact, your boy (me) when i had idk 10 9 years i forgot to put pants down and i pee myself and idk i guess i shit myself too , shut up its fun fact laugh of me i allow", 25);
+            break;
+        case 50000:
+            createNote("HM you know i will work very hard to come to japan for you", 26);
+            break;
+        case 60000:
+            createNote("nina want me to pee in her, so you want too? as a weak girl? i am sure you will love that", 27);
+            break;
+        case 70000:
+            createNote("i wont die, not now, i can die bc of that fk illness but i wont for you for nina, i want live with you both and have happy life dont you dare die too!", 28);
+            break;
+        case 80000:
+            createNote("we will have so much fun together or alone i will love that, i need it", 29);
+            break;
+        case 90000:
+            createNote("well i guess its slowly end of that, Nino even if you were bad to me and hate me before i forgive you, you are good cute great girl i dont regret meeting you, i love you mwah", 30);
+}
+                        
 
-    // Po każdym kliknięciu randomizujemy istniejące notki (1-19 i 21)
-    setTimeout(randomizeNotesPositions, 100);
 });
