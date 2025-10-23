@@ -161,6 +161,25 @@ mainButton.addEventListener('click', () => {
     }, DURATION + 100);
 
     break;
+function randomizeNotesPositions() {
+    // tablica notek do losowania: 1-19 i 21
+    const noteNumbers = [...Array(19).keys()].map(i => i+1).concat([21]);
+
+    noteNumbers.forEach(num => {
+        const note = document.querySelector(`.note.note-position-${num}`);
+        if(note) {
+            // losujemy top i left w procentach, np. 5% - 90%
+            const top = Math.floor(Math.random() * 85) + 5; 
+            const left = Math.floor(Math.random() * 85) + 5;
+            note.style.top = top + "%";
+            note.style.left = left + "%";
+            note.style.transform = "translate(-50%, -50%) scale(0.8)";
+        }
+    });
+}
+
+// Wywołujemy przy załadowaniu strony
+window.addEventListener("DOMContentLoaded", randomizeNotesPositions);
 
        }
 });
