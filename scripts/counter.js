@@ -113,11 +113,11 @@ mainButton.addEventListener('click', () => {
             break;
 
         case 10010:
-            createNote("YOU ARE COOKED I ADDED 100 000 LAST LVL, use autoclicker", 18);
+            createNote("YOU ARE COOKED I ADDED 100 000 LAST LVL, use autoclicker", 21);
             break;
 
         case 100000:
-    createNote("are you fucking sick? 100 000 really? wow nino nah its really wow i am really proud of you", 21);
+    createNote("are you fucking sick? 100 000 really? wow nino nah its really wow i am really proud of you", 22);
 
     // --- efekt zatrzęsienia --- //
     // dodajemy klasę shake do body (używa @keyframes shake w CSS)
