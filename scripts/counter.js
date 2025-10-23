@@ -7,13 +7,12 @@ if (!mainButton || !notesContainer || !imageSliderContainer) {
     console.error('Required elements not found!');
 }
 
-// Tworzymy notkę i dodajemy do DOM
 function createNote(text, position) {
     const note = document.createElement('div');
     note.className = `note note-position-${position}`;
     note.textContent = text;
     document.body.appendChild(note);
-    
+
     setTimeout(() => {
         note.classList.add('visible');
     }, 100);
@@ -59,10 +58,10 @@ mainButton.addEventListener('click', () => {
             createNote("500 !? THE FUCK, YOU DONT HAVE ANY THING TO DO? MAYBE TALK WITH ME!! OR SOMETHING STOP CLICK!!!!", 10);
             break;
         case 1000:
-            createNote("well well well 1000? well if you want ...", 11);
+            createNote("well well well 1000? well if you want fuck just say it", 11);
             break;
         case 1010:
-            createNote("you so cute", 12);
+            createNote("you so cute!", 12);
             break;
         case 1100:
             createNote("wow you made 1000 now 1100? i am proud of you", 13);
@@ -77,38 +76,46 @@ mainButton.addEventListener('click', () => {
             createNote("My kid my daughter i am your dad! congratulasion at 2000!", 16);
             break;
         case 2500:
-            createNote("oh wow you keep going,keep going and system will fall", 17);
+            createNote("oh wow you keep going,keep going and system will fall!", 17);
             break;
         case 3000:
             createNote("3000? is it worth it? idk what to text tbh", 18);
             break;
         case 5000:
             createNote("5000!? wow i am proud of you,website will got broke in while :p", 19);
-            setTimeout(() => {
-                const note5000 = document.querySelector('.note.note-position-19');
-                if(note5000) {
-                    note5000.style.backgroundColor = 'red';
-                    note5000.style.color = 'white';
-                    note5000.style.animation = 'shake 0.5s ease-in-out 5';
-                }
-            }, 150);
             break;
         case 10000:
-            createNote("10000 the end, i love you Nino ...", 20); // efekt specjalny na środku
-            document.body.style.transition = 'background-color 0.2s ease';
-            document.body.style.animation = 'shake 0.5s ease-in-out 6';
-            const prevBg = getComputedStyle(document.body).backgroundColor;
-            document.body.style.backgroundColor = 'red';
-            setTimeout(() => {
-                document.body.style.animation = '';
-                document.body.style.backgroundColor = prevBg || '#f0f0f0';
-            }, 3000);
+            createNote("10000 the end, i love you Nino ...", 20);
             break;
         case 10010:
-            createNote("YOU ARE COOKED I ADDED 100 000 LAST LVL, use autoclicker", 21); // normalna, też randomizowana
+            createNote("YOU ARE COOKED I ADDED 100 000 LAST LVL, use autoclicker", 21);
             break;
-        case 10:
-            createNote("are you fucking sick? 100 000 really? wow nino nah its really wow i am really proud of you", 22); // efekt wielki, center
+        case 20000:
+            createNote("I ADDED NEW NOTES FROM MEEEE NINOOOOOO, heh i love you my shy cutie", 23);
+            break;
+        case 30000:
+            createNote("oh well you keep going huh? i will tell you fun fact in 40000", 24);
+            break;
+        case 40000:
+            createNote("so fun fact, your boy (me) when i had idk 10 9 years i forgot to put pants down and i pee myself and idk i guess i shit myself too , shut up its fun fact laugh of me i allow", 25);
+            break;
+        case 50000:
+            createNote("HM you know i will work very hard to come to japan", 26);
+            break;
+        case 60000:
+            createNote("nina want me to pee in her, so you want too? as a weak girl? i am sure you will love that", 27);
+            break;
+        case 70000:
+            createNote("i wont die, not now, i can die bc of that fk illness but i wont for you for nina, i want live with you both and have happy life dont you dare die too!", 28);
+            break;
+        case 80000:
+            createNote("we will have so much fun together or alone i will love that, i need it!", 29);
+            break;
+        case 90000:
+            createNote("well i guess its slowly end of that, Nino even if you were bad to me and hate me before i forgive you, you are good cute great girl i dont regret meeting you, i love you mwah", 30);
+            break;
+        case 100000:
+            createNote("are you fucking sick? 100 000 really? wow nino nah its really wow i am really proud of you,this is the end my dear i hope you had fun and you are happy of my website only for you and for your name mwah nino!", 22);
             document.body.classList.add('global-shake');
             const imageUrl = 'assets/images1/cracked.png';
             const overlay = document.createElement('div');
@@ -128,30 +135,4 @@ mainButton.addEventListener('click', () => {
             }, DURATION + 100);
             break;
     }
- case 20000:
-            createNote("I ADDED NEW NOTES FROM MEEEE NINOOOOOO, heh i love you my shy cutie", 23);
-            break;
-        case 30000:
-            createNote("oh well you keep going huh? i will tell you fun fact in 40000 ", 24);
-            break;
-        case 40000:
-            createNote("so fun fact, your boy (me) when i had idk 10 9 years i forgot to put pants down and i pee myself and idk i guess i shit myself too , shut up its fun fact laugh of me i allow", 25);
-            break;
-        case 50000:
-            createNote("HM you know i will work very hard to come to japan for you", 26);
-            break;
-        case 60000:
-            createNote("nina want me to pee in her, so you want too? as a weak girl? i am sure you will love that", 27);
-            break;
-        case 70000:
-            createNote("i wont die, not now, i can die bc of that fk illness but i wont for you for nina, i want live with you both and have happy life dont you dare die too!", 28);
-            break;
-        case 80000:
-            createNote("we will have so much fun together or alone i will love that, i need it", 29);
-            break;
-        case 90000:
-            createNote("well i guess its slowly end of that, Nino even if you were bad to me and hate me before i forgive you, you are good cute great girl i dont regret meeting you, i love you mwah", 30);
-}
-                        
-
 });
