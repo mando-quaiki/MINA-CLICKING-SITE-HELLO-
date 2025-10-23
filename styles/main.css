@@ -45,3 +45,77 @@ body { min-height:100vh; display:flex; justify-content:center; align-items:cente
 
 /* Animacja dla wszystkich notek */
 .note.visible { opacity: 1; transform: translate(0, 0) scale(1); }
+/* --- CSS --- */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial, sans-serif;
+  background-color:#f0f0f0;
+  position:relative;
+}
+
+.note {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  opacity: 0;
+  position: fixed;
+  width: 220px;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.note.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* notki 20 i 22 zawsze na środku */
+.note-position-20 {
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+}
+
+.note-position-22 {
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 300;
+}
+
+/* animacja shake dla efektów specjalnych */
+@keyframes shake {
+  0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-50%, -50%) rotate(-5deg); }
+  20%, 40%, 60%, 80% { transform: translate(-50%, -50%) rotate(5deg); }
+}
+.global-shake {
+  animation: shake 0.5s ease-in-out 10;
+}
+
+/* overlay dla pękniętego szkła */
+#crack-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+#crack-overlay.crack-show { opacity: 1; }
+
