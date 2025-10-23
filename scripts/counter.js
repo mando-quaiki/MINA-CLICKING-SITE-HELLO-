@@ -107,7 +107,7 @@ mainButton.addEventListener('click', () => {
         case 10010:
             createNote("YOU ARE COOKED I ADDED 100 000 LAST LVL, use autoclicker", 21); // normalna, też randomizowana
             break;
-        case 100000:
+        case 10:
             createNote("are you fucking sick? 100 000 really? wow nino nah its really wow i am really proud of you", 22); // efekt wielki, center
             document.body.classList.add('global-shake');
             const imageUrl = 'assets/images1/cracked.png';
